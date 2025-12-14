@@ -26,7 +26,7 @@ while guessed_correctly == False:
 
 print(user_input)
 print("Congrats you guessed it right")
-print("you took", attempts, "attempts to guess")
+print("you took", attempts, "attempts to guess the number")
 
 
     
