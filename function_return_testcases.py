@@ -9,6 +9,7 @@ def analyze_marks(marks):
         if i < 0 or i > 100:
             invalid += 1
             continue
+# this is test
 
         valid_count += 1
         total_sum += i
