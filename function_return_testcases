@@ -1,20 +1,8 @@
 def analyze_marks(marks):
     total = len(marks)
-    passed = 0
-    failed = 0
-    invalid = 0
-    valid_count = 0
-    total_sum = 0
-    average =0
-
-    high = marks[0]
-    low = marks[0]
-
-    grade_a = 0
-    grade_b = 0
-    grade_c = 0
-    grade_d = 0
-    grade_f = 0
+    passed = failed = invalid = valid_count = total_sum = average =0
+    high = low = None
+    grade_a = grade_b = grade_c = grade_d = grade_f = 0
 
     for i in marks:
 
@@ -25,9 +13,9 @@ def analyze_marks(marks):
         valid_count += 1
         total_sum += i
 
-        if i > high:
+        if high is None or i > high:
             high = i
-        if i < low:
+        if low is None or i < low:
             low = i
 
         if i >= 60:
@@ -45,7 +33,6 @@ def analyze_marks(marks):
             grade_d += 1
         else:
             grade_f += 1
-
         
         average = total_sum / valid_count
 
@@ -116,7 +103,7 @@ else:
     print("Test 3 Failed")
 
 #Test case 4
-marks4 = [50, 100]
+marks4 = [50, 100, -30]
 
 result4 = analyze_marks(marks4)
 
