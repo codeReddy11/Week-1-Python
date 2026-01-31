@@ -11,6 +11,8 @@ def analyze_marks(marks):
             continue
 # this is test
 
+#the comment is been added here directly in the GIT and practice the code pull from repo to local branch
+
         valid_count += 1
         total_sum += i
 
